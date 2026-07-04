@@ -1,0 +1,53 @@
+@import "@fontsource-variable/geist";
+@import "tailwindcss";
+
+@theme inline {
+  --font-sans: "Geist Variable", sans-serif;
+  --color-brand:       #F97316;
+  --color-brand-dark:  #EA6C00;
+  --color-dark:        #111827;
+  --color-success:     #22C55E;
+  --color-admin:       #2563EB;
+  --shadow-card:       0 2px 16px rgba(0,0,0,0.06);
+  --shadow-hover:      0 8px 32px rgba(0,0,0,0.12);
+  --animate-marquee:   marquee 20s linear infinite;
+  --keyframes-marquee: {
+    from: { transform: translateX(0); }
+    to: { transform: translateX(-50%); }
+  };
+}
+
+:root {
+  --brand: #F97316;
+  --brand-glow: rgba(249,115,22,0.35);
+}
+
+/* Hide scrollbar but keep scroll functionality */
+.scrollbar-hide {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+
+body {
+  font-family: var(--font-sans);
+}
+
+@layer base {
+  .container {
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+    max-width: 1280px;
+  }
+  @media (min-width: 1024px) {
+    .container {
+      padding-left: 5rem;
+      padding-right: 5rem;
+    }
+  }
+}
